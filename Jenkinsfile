@@ -8,7 +8,7 @@ pipeline {
 		}		
 		stage ('install modules'){
 			steps{
-				bat 'npm install'
+				sh 'npm install'
 			}
 		}		
 	}
