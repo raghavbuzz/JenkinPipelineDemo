@@ -8,12 +8,12 @@ pipeline {
 		}		
 		stage ('install modules'){
 			steps{
-				bat 'npm install'
+				sh 'npm install'
 			}
 		}
 		stage ('build'){
 			steps{
-				bat 'npm run ng build --prod --base-href /jenkinpipelinedemo/'
+				sh 'ng build --prod --base-href /jenkinpipelinedemo/'
 			}
 		}		
 	}
