@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage ('build'){
 			steps{
-				sh 'ng build --prod --base-href /jenkinpipelinedemo/'
+				sh 'npm run ng build --prod'
 			}
 		}		
 	}
