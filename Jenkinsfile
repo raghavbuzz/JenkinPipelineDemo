@@ -8,7 +8,7 @@ pipeline {
 		}		
 		stage ('install modules'){
 			steps{
-				bat 'echo %PATH%'
+				bat 'npm install'
 			}
 		}		
 	}
