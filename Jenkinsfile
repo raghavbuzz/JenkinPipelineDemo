@@ -1,15 +1,25 @@
 pipeline {
-	agent any
-	stages {
-		stage('One'){
-			steps {
-				echo 'Hi from 1st Step'
-			}
-		}
-		stage('git clone'){
-			steps {
-				git clone "https://github.com/raghavbuzz/JenkinPipelineDemo.git"
-			}
-		}
-	}
+         agent any
+         stages {
+                 stage('One') {
+                 steps {
+                     echo 'Hi, this is Zulaikha from edureka'
+                 }
+                 }
+                 stage('Two') {
+                 steps {
+                    input('Do you want to proceed?')
+                 }
+                 }
+                 stage('Three') {
+                 when {
+                       not {
+                            branch "master"
+                       }
+                 }
+                 steps {
+                       echo "Hello"
+                 }
+                 }
+              }
 }
