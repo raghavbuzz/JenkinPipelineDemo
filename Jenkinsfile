@@ -8,7 +8,7 @@ pipeline {
 		}		
 		stage ('install modules'){
 			steps{
-				sh 'npm install'
+				'C:\cygwin64\bin\sh' 'npm install'
 			}
 		}		
 	}
