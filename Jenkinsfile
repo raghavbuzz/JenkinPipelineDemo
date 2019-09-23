@@ -10,6 +10,11 @@ pipeline {
 			steps{
 				sh 'npm install'
 			}
+		}
+		stage ('build'){
+			steps{
+				sh 'npm run ng build --prod --base-href /jenkinpipelinedemo/'
+			}
 		}		
 	}
 }		
