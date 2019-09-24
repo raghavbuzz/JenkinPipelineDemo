@@ -26,7 +26,7 @@ pipeline {
 				bat 'xcopy dist\\Angular8POC "C:\\Raghav\\Codies\\Hosting\\jenkinpipelinedemo" /O /X /E /H /K'
 			}
 		}
-		stage ('deploy'){			
+		stage ('post-deploy'){			
 			steps{
 				bat 'deleteDir'
 			}
