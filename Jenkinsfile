@@ -31,6 +31,12 @@ pipeline {
         always {
             echo 'One way or another, I have finished'
             deleteDir()
+			dir("${workspace}@tmp") {
+                deleteDir()
+            }            
+            dir("${workspace}@script") {
+                deleteDir()
+            }
         }
         success {
             echo 'I succeeeded! :)'
