@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage ('build'){
 			steps{
-				bat 'npm run ng --build --prod --baseHref=/jenkinpipelinedemo/ -optimization=true'
+				bat 'npm run ng build --prod --baseHref=/jenkinpipelinedemo/ -optimization=true'
 			}
 		}
 		stage ('pre-deploy'){
