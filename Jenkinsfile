@@ -15,12 +15,22 @@ pipeline {
 			steps{
 				sh 'npm run build-prod'
 			}
-		}		
+		}
+		// stage ('pre-deploy'){
+		// 	steps{
+		// 		bat 'del /q "C:\\Raghav\\Codies\\Hosting\\jenkinpipelinedemo\\*"'
+		// 	}
+		// }		
+		// stage ('deploy'){			
+		// 	steps{
+		// 		bat 'xcopy dist\\Angular8POC "C:\\Raghav\\Codies\\Hosting\\jenkinpipelinedemo" /O /X /E /H /K'
+		// 	}
+		// }
 	}
 	post {
         always {
             echo 'One way or another, I have finished'
-            deleteDir()
+            // deleteDir()
 			dir("${workspace}@tmp") {
                 deleteDir()
             }            
