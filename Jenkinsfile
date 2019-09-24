@@ -26,13 +26,10 @@ pipeline {
 				bat 'xcopy dist\\Angular8POC "C:\\Raghav\\Codies\\Hosting\\jenkinpipelinedemo" /O /X /E /H /K'
 			}
 		}
-	}
-	post {
-		success {
-			slackSend(color: '#00FF00', message: "Build Successful")
+		stage ('deploy'){			
+			steps{
+				bat 'deleteDir'
+			}
 		}
-		failure {
-			slackSend(color: '#FF0000', message: "Build Failed")
-		}
-	}
+	}	
 }
