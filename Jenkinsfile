@@ -18,7 +18,7 @@ pipeline {
 		}		
 		stage ('deploy'){
 			steps{
-				bat 'xcopy dist\Angular8POC "C:\Raghav\Codies\Hosting\jenkindemo" /O /X /E /H /K'
+				bat 'xcopy dist\\Angular8POC "C:\\Raghav\\Codies\\Hosting\\jenkindemo" /O /X /E /H /K'
 			}
 		}
 	}
