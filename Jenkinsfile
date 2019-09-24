@@ -15,11 +15,13 @@ pipeline {
 			steps{
 				bat 'npm run ng build --prod'
 			}
-		}		
-		stage ('deploy'){
+		}
+		stage ('pre-deploy'){
 			steps{
 				bat 'del /q "C:\\Raghav\\Codies\\Hosting\\jenkinpipelinedemo\\*"'
 			}
+		}		
+		stage ('deploy'){			
 			steps{
 				bat 'xcopy dist\\Angular8POC "C:\\Raghav\\Codies\\Hosting\\jenkinpipelinedemo" /O /X /E /H /K'
 			}
