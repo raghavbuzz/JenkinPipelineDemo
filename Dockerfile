@@ -16,10 +16,10 @@ ENV PATH /app/node_modules/.bin:$PATH
  COPY package.json /app/package.json
  RUN npm install
  RUN npm install -g @angular/cli@7.3.9
- RUN npm run build-prod
 
 # add app
-COPY ./dist /app
+COPY . /app
+RUN npm run build-prod
 
 # start app
 CMD ng serve --host 0.0.0.0
