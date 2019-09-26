@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent { dockerfile true }
 	stages {
 		stage('One'){
 			steps{
@@ -8,12 +8,14 @@ pipeline {
 		}		
 		stage ('install modules'){
 			steps{
-				sh 'npm install'
+				// sh 'npm install'
+				echo 'install modules'
 			}
 		}
 		stage ('build'){
 			steps{
-				sh 'npm run build-prod'
+				// sh 'npm run build-prod'
+				echo 'build'
 			}
 		}
 		// stage ('pre-deploy'){
