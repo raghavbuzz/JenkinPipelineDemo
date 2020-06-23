@@ -34,10 +34,10 @@ pipeline {
             echo 'One way or another, I have finished'
             // deleteDir()
 			dir("${workspace}@tmp") {
-                deleteDir()
+                // deleteDir()
             }            
             dir("${workspace}@script") {
-                deleteDir()
+                // deleteDir()
             }
         }
         success {
